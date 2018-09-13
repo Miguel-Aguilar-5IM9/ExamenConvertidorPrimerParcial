@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Examen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function Yen()
+            {
+                
+                document.getElementById("CO").value = "Yenes";
+            }
+            function Dolar()
+            {
+                document.getElementById("CO").value = "Dolares";
+            }
+            
+            function enviar()
+            {
+                document.getElementById("Form1").submit();
+            }
+        </script>
+    </head>
+    <body>
+        <form method="post" name="FormConvert" action="Convertir" id="Form1">
+            <center>
+                <h2>Convertidor de moneda</h2>
+                <P>Escriba el número de la cantidad que desea convertir.</P>
+                <br>
+                <br>
+                <INPUT type="number" name="numero" placeholder="Inserte su numero">
+                <br>
+                
+                <br>
+                <INPUT type="button" value="Yenes" name="Yenes" onclick="Yen(), enviar();"> 
+                <INPUT type="button" value="Dolares" name="Dolares" onclick="Dolar(), enviar();">
+                <br>
+                <INPUT type="text" id="CO" name="Convertxt" style="visibility: hidden">
+            </center>    
+        </form>
+    </body>
+</html>
